@@ -22,6 +22,7 @@ import com.jonlemarquand.pokedex.R
 import com.jonlemarquand.pokedex.domain.utils.Type
 import com.jonlemarquand.pokedex.domain.utils.typesList
 import com.jonlemarquand.pokedex.presentation.components.ButtonWithBackground
+import com.jonlemarquand.pokedex.presentation.components.DoubleColumnList
 import com.jonlemarquand.pokedex.presentation.ui.theme.BackgroundGrey
 import com.jonlemarquand.pokedex.presentation.ui.theme.Blue
 import com.jonlemarquand.pokedex.presentation.ui.theme.BlueFaded
@@ -50,19 +51,12 @@ fun TypesScreen(types: List<Type>, modifier: Modifier = Modifier) {
         ) {
 
         }
-        LazyColumn {
-            items(types.chunked(2)) { pair ->
-                Row(modifier = Modifier.padding(8.dp)) {
-                    TypesListItem(type = pair[0], Modifier.weight(1f))
-                    Spacer(modifier = Modifier.width(8.dp))
-                    if (pair.size > 1) {
-                        TypesListItem(type = pair[1], Modifier.weight(1f))
-                    } else {
-                        Spacer(modifier = Modifier.weight(1f))
-                    }
-                }
+        DoubleColumnList(
+            typesList,
+            itemContent = { type, modifier ->
+                TypesListItem(type = type, modifier = modifier)
             }
-        }
+        )
     }
 }
 
