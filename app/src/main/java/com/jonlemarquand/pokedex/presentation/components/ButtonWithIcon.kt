@@ -25,10 +25,11 @@ fun ButtonWithIcon(
     modifier: Modifier = Modifier,
     buttonText: String,
     buttonColor: Color,
-    buttonIcon: Int
+    buttonIcon: Int,
+    onNavigate: () -> Unit
 ) {
     Button(
-        onClick = { /*TODO*/ },
+        onClick = { onNavigate() },
         colors = ButtonDefaults.buttonColors(containerColor = buttonColor)
     ) {
         Row(
@@ -58,7 +59,8 @@ fun ButtonWithIconPreview() {
         ButtonWithIcon(
             buttonText = "Locations",
             buttonColor = Red,
-            buttonIcon = R.drawable.pokeball
+            buttonIcon = R.drawable.pokeball,
+            onNavigate = { }
         )
     }
 }

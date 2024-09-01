@@ -33,6 +33,8 @@ import androidx.compose.ui.unit.sp
 import androidx.graphics.shapes.CornerRounding
 import androidx.graphics.shapes.RoundedPolygon
 import androidx.graphics.shapes.toPath
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.jonlemarquand.pokedex.R
 import com.jonlemarquand.pokedex.presentation.components.ButtonWithIcon
 import com.jonlemarquand.pokedex.presentation.ui.theme.Blue
@@ -44,7 +46,7 @@ import com.jonlemarquand.pokedex.presentation.ui.theme.RedFaded
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier) {
+fun HomeScreen(navController: NavHostController, modifier: Modifier = Modifier) {
     Column(
         Modifier
             .fillMaxSize()
@@ -154,26 +156,30 @@ fun HomeScreen(modifier: Modifier = Modifier) {
             ButtonWithIcon(
                 buttonText = "Types",
                 buttonColor = Green,
-                buttonIcon = R.drawable.pokeball
+                buttonIcon = R.drawable.pokeball,
+                onNavigate = { navController.navigate("types") }
             )
             Spacer(modifier = modifier.size(16.dp))
             ButtonWithIcon(
                 buttonText = "Locations",
                 buttonColor = Orange,
-                buttonIcon = R.drawable.location
+                buttonIcon = R.drawable.location,
+                onNavigate = { /*TODO*/ }
             )
             Spacer(modifier = modifier.size(16.dp))
 
             ButtonWithIcon(
                 buttonText = "Moves and Abilities",
                 buttonColor = Blue,
-                buttonIcon = R.drawable.star
+                buttonIcon = R.drawable.star,
+                onNavigate = { /*TODO*/ }
             )
             Spacer(modifier = modifier.size(16.dp))
             ButtonWithIcon(
                 buttonText = "Favourites",
                 buttonColor = Red,
-                buttonIcon = R.drawable.heart
+                buttonIcon = R.drawable.heart,
+                onNavigate = { /*TODO*/ }
             )
         }
     }
@@ -182,7 +188,8 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun HomeScreenPreview() {
+    val navController = rememberNavController()
     PokedexTheme {
-        HomeScreen()
+        HomeScreen(navController)
     }
 }
