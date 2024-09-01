@@ -59,4 +59,4 @@ val TealFaded = Color(0xFF5BB2C3)
 val Yellow = Color(0xFFFED856)
 val YellowFaded = Color(0xFFFEDE74)
 
-
+val BackgroundGrey = Color(0xFFF9F9F9)
