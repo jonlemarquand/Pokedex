@@ -1,4 +1,4 @@
-package com.jonlemarquand.pokedex.domain.utils
+package com.jonlemarquand.pokedex.data.static
 
 import androidx.compose.ui.graphics.Color
 import com.jonlemarquand.pokedex.R
@@ -37,117 +37,117 @@ import com.jonlemarquand.pokedex.presentation.ui.theme.TealFaded
 import com.jonlemarquand.pokedex.presentation.ui.theme.Yellow
 import com.jonlemarquand.pokedex.presentation.ui.theme.YellowFaded
 
-data class Type(
+data class TypeUIInfo(
     val name: String,
     val color: Color,
     val fadedColor: Color,
     val icon: Int
 )
 
-val typesList = listOf(
-    Type(
+val baseTypeList = listOf(
+    TypeUIInfo(
         name = "Normal",
         color = Grey,
         fadedColor = GreyFaded,
         icon = R.drawable.normal,
     ),
-    Type(
+    TypeUIInfo(
         name = "Fire",
         color = Orange,
         fadedColor = OrangeFaded,
         icon = R.drawable.fire,
     ),
-    Type(
+    TypeUIInfo(
         name = "Fighting",
         color = Red,
         fadedColor = RedFaded,
         icon = R.drawable.fighting,
     ),
-    Type(
+    TypeUIInfo(
         name = "Water",
         color = Blue,
         fadedColor = BlueFaded,
         icon = R.drawable.water,
     ),
-    Type(
+    TypeUIInfo(
         name = "Flying",
         color = Lilac,
         fadedColor = LilacFaded,
         icon = R.drawable.flying,
     ),
-    Type(
+    TypeUIInfo(
         name = "Grass",
         color = Green,
         fadedColor = GreenFaded,
         icon = R.drawable.grass,
     ),
-    Type(
+    TypeUIInfo(
         name = "Poison",
         color = Purple,
         fadedColor = PurpleFaded,
         icon = R.drawable.poison,
     ),
-    Type(
+    TypeUIInfo(
         name = "Electric",
         color = Yellow,
         fadedColor = YellowFaded,
         icon = R.drawable.electric,
     ),
-    Type(
+    TypeUIInfo(
         name = "Ground",
         color = Mustard,
         fadedColor = MustardFaded,
         icon = R.drawable.ground,
     ),
-    Type(
+    TypeUIInfo(
         name = "Psychic",
         color = Pink,
         fadedColor = PinkFaded,
         icon = R.drawable.psychic,
     ),
-    Type(
+    TypeUIInfo(
         name = "Rock",
         color = Gold,
         fadedColor = GoldFaded,
         icon = R.drawable.rock,
     ),
-    Type(
+    TypeUIInfo(
         name = "Ice",
         color = Cyan,
         fadedColor = CyanFaded,
         icon = R.drawable.ice,
     ),
-    Type(
+    TypeUIInfo(
         name = "Bug",
         color = Sage,
         fadedColor = SageFaded,
         icon = R.drawable.bug,
     ),
-    Type(
+    TypeUIInfo(
         name = "Dragon",
         color = Grey,
         fadedColor = GreyFaded,
         icon = R.drawable.grass,
     ),
-    Type(
+    TypeUIInfo(
         name = "Ghost",
         color = Mauve,
         fadedColor = MauveFaded,
         icon = R.drawable.ghost,
     ),
-    Type(
+    TypeUIInfo(
         name = "Dark",
         color = Brown,
         fadedColor = BrownFaded,
         icon = R.drawable.steel,
     ),
-    Type(
+    TypeUIInfo(
         name = "Steel",
         color = Teal,
         fadedColor = TealFaded,
         icon = R.drawable.steel,
     ),
-    Type(
+    TypeUIInfo(
         name = "Fairy",
         color = Rose,
         fadedColor = RoseFaded,

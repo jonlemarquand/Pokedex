@@ -5,12 +5,13 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.jonlemarquand.pokedex.data.local.entity.PokemonEntity
+import com.jonlemarquand.pokedex.data.local.entity.TypeEntity
 
 @Dao
 interface TypeDao {
-    @Query("SELECT * FROM electric_pokemon")
-    suspend fun getAll(): List<PokemonEntity>
+    @Query("SELECT * FROM type")
+    suspend fun getAll(): List<TypeEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(pokemon: List<PokemonEntity>)
+    suspend fun insertAll(type: List<TypeEntity>)
 }
