@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.jonlemarquand.pokedex.domain.utils.typesList
-import com.jonlemarquand.pokedex.presentation.TypesListItem
+import com.jonlemarquand.pokedex.presentation.type.TypesListItem
 import com.jonlemarquand.pokedex.presentation.ui.theme.PokedexTheme
 
 @Composable
